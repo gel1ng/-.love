@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            margin: 0; 
+            padding: 0; 
+        }
+ 
+    </style>
+</head>
+<body>
+    <a href="http://www.Darling Forever.com">你好，这是一份礼物</a>
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <h1>Merry Christmas</h1>
+                <img src="darling.PNG" alt="前面标题">
+            </div>
+            <div class="back">
+                <h1>I Love You</h1>
+                <img src="forever.png" alt="后面标题">
+            </div>
+        </div>
+    </div>
+    <div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+    <audio id="music" controls>
+        <source src="Christmas Song.mp3" type="audio/mpeg">
+     
+    </audio>
+   
+    <script>
+        var music = document.getElementById('music');
+    var playButton = document.getElementById('playButton');
+    var isPlaying = false;
+    function updateButton() {
+        if (isPlaying) {
+            playButton.textContent = '暂停音乐';
+        } else {
+            playButton.textContent = '播放音乐';
+        }
+    }
+    playButton.addEventListener('click', function() {
+        if (isPlaying) {
+            music.pause();
+            isPlaying = false;
+        } else {
+            music.play();
+            isPlaying = true;
+        }
+        updateButton(); 
+    });
+    updateButton();
+    </script>
+</body>
+</html>
